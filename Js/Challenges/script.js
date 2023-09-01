@@ -6,7 +6,14 @@ const chapterFive = document.getElementById("chapter5");
 const chapterSix = document.getElementById("chapter6");
 const chapterSeven = document.getElementById("chapter7");
 const chapterEight = document.getElementById("chapter8");
-
+/**
+ * Aviso
+ *
+ */
+let razonAviso = "Si ve que el titulo de los ejercicios es raro \n Es porque el aprendíz se creia escritor \n No dejaré que lo haga la proxima vez";
+setTimeout(() => {
+    alert("Palabras del Aprendiz de Bases: \n" + razonAviso);
+}, 4000);
 /**
  * Challenge 1
  * Imprimir en un alert o un log
@@ -55,29 +62,28 @@ function capítuloTres() {
         num2 = parseFloat(prompt("Ingrese numero 2"));
     }
     switch (operation) {
-    case 1:
-      result = num1 + num2;
-      alert("El resultado de la suma es: " + result);
-      break;
-    case 2:
-      result = num1 - num2;
-      alert(result);
-      break;
-    case 3:
-      result = num1 * num2;
-      alert("El resultado de la multiplicación es: " + result);
-      break;
-    case 4:
-      if (num2 === 0) {
-        alert("No es posible dividir por cero");
-      } else {
-        result = num1 / num2;
-        alert("El resultado de la división es: " + result);
-      }
-      break;
-  }
+        case 1:
+            result = num1 + num2;
+            alert("El resultado de la suma es: " + result);
+            break;
+        case 2:
+            result = num1 - num2;
+            alert(result);
+            break;
+        case 3:
+            result = num1 * num2;
+            alert("El resultado de la multiplicación es: " + result);
+            break;
+        case 4:
+            if (num2 === 0) {
+                alert("No es posible dividir por cero");
+            } else {
+                result = num1 / num2;
+                alert("El resultado de la división es: " + result);
+            }
+            break;
+    }
 }
-
 /**
  * Challenge 4
  * Encontrar el número mayor
@@ -86,16 +92,14 @@ function capítuloTres() {
  */
 function capítuloCuatro() {
     let listNumber = [10, 12, 18, 24, 30, 22, 29, 50];
-
-    let bigNumber = listNumber [0];
-
-    for(let i = 0; i < listNumber.length; i++){
+    let bigNumber = listNumber[0];
+    for (let i = 0; i < listNumber.length; i++) {
         if (listNumber[i] > bigNumber) {
             bigNumber = listNumber[i]
         }
-            }
+    }
     alert("El número mayor es: " + bigNumber);
-    console.log("El número mayor es: " , bigNumber);
+    console.log("El número mayor es: ", bigNumber);
 }
 /**
  * Challenge 5
@@ -106,7 +110,6 @@ function capítuloCuatro() {
 function capítuloCinco() {
     let numeros = [2, 6, 7, 8, 12, 18, 21, 24];
     let total = 0
-
     numeros.forEach(e => {
         total += e
         console.log(total);
@@ -135,17 +138,13 @@ function capítuloSeis() {
  */
 function capítuloSiete() {
     const array = [1, 4, 7, 3, 10, 12];
-
-let suma = 0;
-
-array.forEach((numero) => {
-  if (numero % 2 === 0) {
-    suma += numero;
-  }
-});
-
-console.log("La suma de los elementos pares es:", suma);
-
+    let suma = 0;
+    array.forEach((numero) => {
+        if (numero % 2 === 0) {
+            suma += numero;
+        }
+    });
+    console.log("La suma de los elementos pares es:", suma);
 }
 /**
  * Challenge 8
@@ -154,22 +153,17 @@ console.log("La suma de los elementos pares es:", suma);
  * con while
  */
 function capítuloOcho() {
-let numeros = [30, 45, 60, 72, 48, 10];
-
-let indice = 0;
-
-while (indice < numeros.length && numeros[indice] <= 50) {
-    indice++;
+    let numeros = [30, 45, 60, 72, 48, 10];
+    let indice = 0;
+    while (indice < numeros.length && numeros[indice] <= 50) {
+        indice++;
+    }
+    if (indice < numeros.length) {
+        console.log("El primer número mayor que 50 es:", numeros[indice]);
+    } else {
+        console.log("No se encontró ningún número mayor que 50 en el array.");
+    }
 }
-
-if (indice < numeros.length) {
-    console.log("El primer número mayor que 50 es:", numeros[indice]);
-} else {
-    console.log("No se encontró ningún número mayor que 50 en el array.");
-}
-
-}
-
 chapterOne.onclick = function() {
     capítuloUno();
 }
